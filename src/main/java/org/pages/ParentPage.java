@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 abstract public class ParentPage extends CommonActionsWithElements {
-    protected String baseUrl = "https://aqa-complexapp.onrender.com";
+    protected String baseUrl = "https://demoqa.com/";
 
     public ParentPage(WebDriver webDriver) {
         super(webDriver);
