@@ -11,6 +11,9 @@ public class PageProvider {
     public HomePage getHomePage(){
         return new HomePage(webDriver);
     }
+    public ElementsPage getElements(){
+        return new ElementsPage(webDriver);
+    }
 
     public LoginPage getLoginPage() {
         return new LoginPage(webDriver);

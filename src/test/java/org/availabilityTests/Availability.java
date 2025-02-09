@@ -11,9 +11,11 @@ public class Availability extends BaseTest {
         pageProvider.getLoginPage().openPage();
         pageProvider.getLoginPage().checkIsToolsQaVisible()
                 .checkIsSeleniumOnlineTrainingVisible()
-                .checkIsTopCardsVisible();
-
+                .checkIsElementsBlockVisible()
+                .checkIsFormsBlockVisible()
+                .checkIsAlertsFrameWindowsBlockVisible()
+                .checkIsWidgetsBlockVisible()
+                .checkIsInteractionsBlockVisible()
+                .checkIsBookStoreApplicationBlockVisible();
     }
-
-
 }
