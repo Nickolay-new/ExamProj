@@ -239,4 +239,14 @@ public class CommonActionsWithElements {
             printErrorAndStopTest(e);
         }
     }
+
+    public void doubleClickOnElement(WebElement webElement) {
+        try {
+            Actions actions = new Actions(webDriver);
+            actions.doubleClick(webElement).build().perform();
+            logger.info("Double click on element " + getElementName(webElement));
+        } catch (Exception e) {
+            printErrorAndStopTest(e);
+        }
+    }
 }
