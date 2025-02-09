@@ -27,9 +27,9 @@ public class BaseTest {
         pageProvider = new PageProvider(webDriver);
     }
 
-    @After
-    public void tearDown() {
-        webDriver.quit();
-        logger.info("Browser was closed");
-    }
+//    @After
+//    public void tearDown() {
+//        webDriver.quit();
+//        logger.info("Browser was closed");
+//    }
 }

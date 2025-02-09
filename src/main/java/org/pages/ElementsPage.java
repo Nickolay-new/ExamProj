@@ -8,6 +8,9 @@ public class ElementsPage extends ParentPage {
     @FindBy(xpath = "//img[@src='/images/Toolsqa.jpg']")
     private WebElement toolsQaBlock;
 
+    /**
+     * Left Menu section of the website.
+     */
     @FindBy(xpath = "//div[@class='element-group']//descendant::*[text()='Elements']")
     private WebElement elementsBlock;
     @FindBy(xpath = "//div[@class='element-group']//descendant::*[text()='Forms']")
@@ -21,9 +24,30 @@ public class ElementsPage extends ParentPage {
     @FindBy(xpath = "//div[@class='element-group']//descendant::*[text()='Book Store Application']")
     private WebElement bookStoreApplicationBlock;
 
+    /**
+     * Items of the Elements section.
+     */
+    @FindBy(xpath = "//div[@class='element-list collapse show']//descendant::*[text()='Text Box']")
+    private WebElement textBox;
+    @FindBy(xpath = "//div[@class='element-list collapse show']//descendant::*[text()='Check Box']")
+    private WebElement checkBox;
+    @FindBy(xpath = "//div[@class='element-list collapse show']//descendant::*[text()='Radio Button']")
+    private WebElement radioButton;
+    @FindBy(xpath = "//div[@class='element-list collapse show']//descendant::*[text()='Web Tables']")
+    private WebElement webTables;
+    @FindBy(xpath = "//div[@class='element-list collapse show']//descendant::*[text()='Buttons']")
+    private WebElement buttons;
+    @FindBy(xpath = "//div[@class='element-list collapse show']//descendant::*[text()='Links']")
+    private WebElement links;
+    @FindBy(xpath = "//div[@class='element-list collapse show']//descendant::*[text()='Broken Links - Images']")
+    private WebElement brokenLinksImages;
+    @FindBy(xpath = "//div[@class='element-list collapse show']//descendant::*[text()='Upload and Download']")
+    private WebElement uploadDownload;
 
 
-public ElementsPage(WebDriver webDriver) {
+
+
+    public ElementsPage(WebDriver webDriver) {
         super(webDriver);
     }
 

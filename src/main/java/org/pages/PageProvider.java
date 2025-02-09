@@ -11,7 +11,7 @@ public class PageProvider {
     public HomePage getHomePage(){
         return new HomePage(webDriver);
     }
-    public ElementsPage getElements(){
+    public ElementsPage getElementsPage(){
         return new ElementsPage(webDriver);
     }
 

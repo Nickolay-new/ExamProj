@@ -21,7 +21,7 @@ public class LoginPage extends ParentPage {
     private List<WebElement> topCards;
     @FindBy(xpath = "//input[@id='userName' and @placeholder='UserName' and @type='text']")
     private WebElement inputUserName;
-    @FindBy(xpath = "//div[@class='card mt-4 top-card' and contains(., 'Elements')]")
+    @FindBy(xpath = "//h5[contains(text(), 'Elements')]")
     private WebElement elementsBlock;
     @FindBy(xpath = "//div[@class='card mt-4 top-card' and contains(., 'Forms')]")
     private WebElement formsBlock;
@@ -100,5 +100,9 @@ public class LoginPage extends ParentPage {
         return this;
     }
 
+    public LoginPage clickOnElementsBlock() {
+        clickOnElement(elementsBlock);
+        return this;
+    }
 
 }
