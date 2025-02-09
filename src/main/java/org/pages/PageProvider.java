@@ -8,5 +8,7 @@ public class PageProvider {
     public PageProvider(WebDriver webDriver) {
         this.webDriver = webDriver;
     }
-
+    public HomePage getHomePage(){
+        return new HomePage(webDriver);
+    }
 }
