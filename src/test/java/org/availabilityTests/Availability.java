@@ -3,7 +3,7 @@ package org.availabilityTests;
 
 import org.baseTest.BaseTest;
 import org.junit.Test;
-import org.pages.CommonActionsWithElements;
+
 
 
 public class Availability extends BaseTest {
@@ -31,7 +31,22 @@ public class Availability extends BaseTest {
                 .checkIsElementsBlockVisible();
 
         pageProvider.getLoginPage().clickOnElementsBlock();
+        pageProvider.getElementsPage().checkIsElementsBlockVisible()
+                .checkIsFormsBlockVisible()
+                .checkIsAlertsFrameWindowsBlockVisible()
+                .checkIsWidgetsBlockVisible()
+                .checkIsInteractionsBlockVisible()
+                .checkIsBookStoreApplicationBlockVisible();
+
+        pageProvider.getElementsPage()
+                .checkIsTextBoxVisible()
+                .checkIsCheckBoxVisible()
+                .checkIsRadioButtonVisible()
+                .checkIsWebTablesVisible()
+                .checkIsButtonsVisible()
+                .checkIsLinksVisible()
+                .checkIsBrokenLinksImagesVisible()
+                .checkIsUploadDownloadVisible()
+                .checkIsDynamicPropertiesVisible();
 }
-
-
 }

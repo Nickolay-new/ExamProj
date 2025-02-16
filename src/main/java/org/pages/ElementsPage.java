@@ -112,5 +112,8 @@ public class ElementsPage extends ParentPage {
     }
 
 
-
+    public LoginPage checkIsElementsBlockVisible() {
+        checkIsElementVisible(elementsBlock);
+        return this.checkIsElementsBlockVisible();
+    }
 }
