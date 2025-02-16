@@ -112,12 +112,37 @@ public class ElementsPage extends ParentPage {
     }
 
 
-    public LoginPage checkIsElementsBlockVisible() {
+    public ElementsPage checkIsElementsBlockVisible() {
         checkIsElementVisible(elementsBlock);
-        return this.checkIsElementsBlockVisible();
+        return this;
     }
 
     public void clickOnButtons() {
         clickOnElement(buttons);
+    }
+
+    public ElementsPage checkIsFormsBlockVisible() {
+        checkIsElementVisible(formsBlock);
+        return this;
+    }
+
+    public ElementsPage checkIsAlertsFrameBlockVisible() {
+        checkIsElementVisible(alertsFrameWindowsBlock);
+        return this;
+    }
+
+    public ElementsPage checkIsWidgetsBlockVisible() {
+        checkIsElementVisible(widgetsBlock);
+        return this;
+    }
+
+    public ElementsPage checkIsInteractionsBlockVisible() {
+        checkIsElementVisible(interactionsBlock);
+        return this;
+    }
+
+    public ElementsPage checkIsBookStoreBlockVisible() {
+        checkIsElementVisible(bookStoreApplicationBlock);
+        return this;
     }
 }

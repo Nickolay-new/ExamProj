@@ -26,14 +26,15 @@ public class Availability extends BaseTest {
                 .checkIsToolsQaVisible()
                 .checkIsSeleniumOnlineTrainingVisible()
                 .checkIsElementsBlockVisible()
+                .scrollToElementsBlock()
                 .clickOnElementsBlock();
         pageProvider.getElementsPage()
                 .checkIsElementsBlockVisible()
                 .checkIsFormsBlockVisible()
-                .checkIsAlertsFrameWindowsBlockVisible()
+                .checkIsAlertsFrameBlockVisible()
                 .checkIsWidgetsBlockVisible()
                 .checkIsInteractionsBlockVisible()
-                .checkIsBookStoreApplicationBlockVisible();
+                .checkIsBookStoreBlockVisible();
         pageProvider.getElementsPage()
                 .checkIsTextBoxVisible()
                 .checkIsCheckBoxVisible()
