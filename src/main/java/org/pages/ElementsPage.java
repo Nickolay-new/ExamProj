@@ -116,4 +116,8 @@ public class ElementsPage extends ParentPage {
         checkIsElementVisible(elementsBlock);
         return this.checkIsElementsBlockVisible();
     }
+
+    public void clickOnButtons() {
+        clickOnElement(buttons);
+    }
 }
