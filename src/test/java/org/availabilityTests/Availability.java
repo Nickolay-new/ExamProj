@@ -8,7 +8,6 @@ import org.junit.Test;
 
 public class Availability extends BaseTest {
 
-    private Object driver;
 
     @Test
     public void T0001_ElementsAvailabilityHomePage() {
