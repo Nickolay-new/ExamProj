@@ -7,7 +7,7 @@ public class Availability extends BaseTest {
 
     @Test
     public void T0001_ElementsAvailabilityHomePage() {
-        pageProvider.getLoginPage()
+        pageProvider.getHomePage()
                 .openPage()
                 .checkIsToolsQaVisible()
                 .checkIsSeleniumOnlineTrainingVisible()
@@ -21,7 +21,7 @@ public class Availability extends BaseTest {
 
     @Test
     public void T0002_ElementsAvailabilityElementsPage() {
-        pageProvider.getLoginPage()
+        pageProvider.getHomePage()
                 .openPage()
                 .checkIsToolsQaVisible()
                 .checkIsSeleniumOnlineTrainingVisible()
