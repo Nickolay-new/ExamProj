@@ -2,12 +2,9 @@ package org.pages;
 
 
 import org.apache.log4j.Logger;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-
 
 import java.util.List;
 
@@ -36,7 +33,6 @@ public class LoginPage extends ParentPage {
 
 
     private Logger logger = Logger.getLogger(getClass());
-
 
 
     public LoginPage(WebDriver webDriver) {
@@ -102,6 +98,11 @@ public class LoginPage extends ParentPage {
 
     public LoginPage clickOnElementsBlock() {
         clickOnElement(elementsBlock);
+        return this;
+    }
+
+    public LoginPage scrollToElementsBlock() {
+        scrollToElement(bookStoreApplicationBlock);
         return this;
     }
 

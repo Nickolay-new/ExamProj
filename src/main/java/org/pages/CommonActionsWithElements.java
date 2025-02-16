@@ -11,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
 
 
@@ -119,6 +120,7 @@ public class CommonActionsWithElements {
     protected void checkIsElementNotVisible(WebElement webElement) {
         Assert.assertFalse("Element is visible", isElementVisible(webElement));
     }
+
     protected void checkIsElementVisible(WebElement webElement) {
         Assert.assertTrue("Element is not visible", isElementVisible(webElement));
     }
@@ -129,7 +131,7 @@ public class CommonActionsWithElements {
 
     //checkTextInElement
     protected void checkTextInElement(WebElement webElement, String text) {
-        Assert.assertEquals("Text in element"+ getElementName(webElement) +"not expected", text, webElement.getText());
+        Assert.assertEquals("Text in element" + getElementName(webElement) + "not expected", text, webElement.getText());
         logger.info("Text in element is expected");
 
     }

@@ -1,5 +1,4 @@
 package org.elementsTests;
-
 import org.baseTest.BaseTest;
 import org.junit.Test;
 
@@ -10,19 +9,19 @@ public class ButtonsTest extends BaseTest {
     public void T0003_ButtonsClickOnButtonsPage() {
         pageProvider.getLoginPage().openPage();
         pageProvider.getLoginPage().checkIsToolsQaVisible()
-                .checkIsElementsBlockVisible();
-
-        pageProvider.getLoginPage().clickOnElementsBlock();
-        pageProvider.getElementsPage().checkIsButtonsVisible();
-
-        pageProvider.getElementsPage().clickOnButtons();
-
-
-        pageProvider.getButtonsPage().doubleClickOnButton();
-
-
+                .checkIsElementsBlockVisible()
+                .scrollToElementsBlock()
+                .clickOnElementsBlock();
+        pageProvider.getElementsPage()
+                .checkIsButtonsVisible()
+                .clickOnButtons();
+        pageProvider.getButtonsPage()
+                .doubleClickOnButton()
+                .checkDoubleClickTextIsVisible()
+                .scrollToRightClickButton()
+                .rightClickOnButton()
+                .checkRightClickTextIsVisible()
+                .clickOnButton()
+                .checkIsDynamicClickTextVisible();
     }
-
-
-
 }

@@ -31,6 +31,38 @@ public class ButtonsPage extends ParentPage {
         return this;
     }
 
+    public ButtonsPage rightClickOnButton() {
+        Actions actions = new Actions(webDriver);
+        actions.contextClick(rightClickButton).perform();
+        return this;
+    }
+
+    public ButtonsPage clickOnButton() {
+        Actions actions = new Actions(webDriver);
+        actions.click(clickMeButton).perform();
+        return this;
+    }
+
+    public ButtonsPage checkDoubleClickTextIsVisible() {
+        checkIsElementVisible(doubleClickMessage);
+        return this;
+    }
+
+    public ButtonsPage checkRightClickTextIsVisible() {
+        checkIsElementVisible(rightClickMessage);
+        return this;
+    }
+
+    public ButtonsPage checkIsDynamicClickTextVisible() {
+        checkIsElementVisible(dynamicClickMessage);
+        return this;
+    }
+
+    public ButtonsPage scrollToRightClickButton() {
+        scrollToElement(rightClickButton);
+        return this;
+    }
+
     public String getRelativeUrl() {
         return "/buttons";
     }
