@@ -29,11 +29,15 @@ public class AlertsPage extends ParentPage {
     public AlertsPage checkIsAlertsTitleVisible() {
         isElementVisible(".main-header");
         return this;
-
     }
 
     public AlertsPage clickOnAlertButton() {
         clickOnElement(alertButton);
+        return this;
+    }
+
+    public AlertsPage checkIsAlertWithTextVisible() {
+        isElementVisible("//p[@id='confirmResult']");
         return this;
     }
 
@@ -42,11 +46,15 @@ public class AlertsPage extends ParentPage {
         return this;
     }
 
+    public AlertsPage checkIsTimerAlertVisible() {
+        isElementVisible("//p[@id='timerAlertButton']");
+        return this;
+    }
+
     public AlertsPage clickOnConfirmButton() {
         clickOnElement(confirmButton);
         return this;
     }
-
 
     public AlertsPage clickOnPromptButton() {
         clickOnElement(promptButton);
