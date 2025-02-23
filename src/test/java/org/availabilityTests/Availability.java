@@ -60,16 +60,23 @@ public class Availability extends BaseTest {
                 .checkIsLinksVisible()
                 .clickOnLinks();
         pageProvider.getLinksPage()
-                .checkIsLinksBlockVisible();
-//                .checkIsHomeLinkVisible()
-//                .checkIsDynamicPropertiesLinkVisible()
-//                .checkIsCreatedLinkVisible()
-//                .checkIsNoContentLinkVisible()
-//                .checkIsMovedLinkVisible()
-//                .checkIsBadRequestLinkVisible()
-//                .checkIsUnauthorizedLinkVisible()
-//                .checkIsForbiddenLinkVisible()
-//                .checkIsNotFoundLinkVisible()
+                .checkIsLinksTitleVisible()
+                .checkIsHomeLinkVisible()
+                .checkIsDynamicLinkVisible()
+                .checkIsCreatedLinkVisible()
+                .checkIsNoContentLinkVisible()
+                .checkIsMovedLinkVisible()
+                .checkIsBadRequestLinkVisible()
+                .checkIsUnauthorizedLinkVisible()
+                .checkIsForbiddenLinkVisible()
+                .checkIsNotFoundLinkVisible();
+
+
+
+
+
+
+
 
     }
 }
