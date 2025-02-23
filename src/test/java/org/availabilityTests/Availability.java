@@ -46,4 +46,30 @@ public class Availability extends BaseTest {
                 .checkIsUploadDownloadVisible()
                 .checkIsDynamicPropertiesVisible();
     }
+
+    @Test
+    public void T0004_ElementsAvailabilityLinksPage() {
+        pageProvider.getHomePage()
+                .openPage()
+                .checkIsToolsQaVisible()
+                .checkIsSeleniumOnlineTrainingVisible()
+                .checkIsElementsBlockVisible()
+                .scrollToElementsBlock()
+                .clickOnElementsBlock();
+        pageProvider.getElementsPage()
+                .checkIsLinksVisible()
+                .clickOnLinks();
+        pageProvider.getLinksPage()
+                .checkIsLinksBlockVisible();
+//                .checkIsHomeLinkVisible()
+//                .checkIsDynamicPropertiesLinkVisible()
+//                .checkIsCreatedLinkVisible()
+//                .checkIsNoContentLinkVisible()
+//                .checkIsMovedLinkVisible()
+//                .checkIsBadRequestLinkVisible()
+//                .checkIsUnauthorizedLinkVisible()
+//                .checkIsForbiddenLinkVisible()
+//                .checkIsNotFoundLinkVisible()
+
+    }
 }

@@ -145,4 +145,8 @@ public class ElementsPage extends ParentPage {
         checkIsElementVisible(bookStoreApplicationBlock);
         return this;
     }
+
+    public void clickOnLinks() {
+        clickOnElement(links);
+    }
 }
