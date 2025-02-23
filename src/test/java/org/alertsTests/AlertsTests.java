@@ -7,7 +7,7 @@ import org.junit.Test;
 public class AlertsTests extends BaseTest {
 
     @Test
-    public void T0005_AlertsTests() throws InterruptedException {
+    public void T0005_AlertsTests()  {
         pageProvider.getHomePage()
                 .openPage()
                 .checkIsToolsQaVisible()
