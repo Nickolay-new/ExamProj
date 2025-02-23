@@ -70,13 +70,5 @@ public class Availability extends BaseTest {
                 .checkIsUnauthorizedLinkVisible()
                 .checkIsForbiddenLinkVisible()
                 .checkIsNotFoundLinkVisible();
-
-
-
-
-
-
-
-
     }
 }
