@@ -19,7 +19,12 @@ public class PageProvider {
         return new HomePage(webDriver);
     }
 
-    public LinksPage getLinksPage() {
-        return new LinksPage(webDriver);
+    public LinksPage getLinksPage() {return new LinksPage(webDriver);
+    }
+
+    public AlertsPage getAlertsPage() {return new AlertsPage(webDriver);
+    }
+
+    public AlertsWindowsPage getAlertsWindowsPage() {return new AlertsWindowsPage(webDriver);
     }
 }

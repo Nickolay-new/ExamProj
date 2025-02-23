@@ -106,4 +106,9 @@ public class HomePage extends ParentPage {
         return this;
     }
 
+    public HomePage clickOnAlertsBlock() {
+        clickOnElement(alertsFrameWindowsBlock);
+        return this;
+    }
+
 }
