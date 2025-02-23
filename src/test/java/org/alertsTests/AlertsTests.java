@@ -2,10 +2,7 @@ package org.alertsTests;
 
 import org.baseTest.BaseTest;
 import org.junit.Test;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 
 public class AlertsTests extends BaseTest {
 
