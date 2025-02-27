@@ -11,12 +11,9 @@ import org.pages.PageProvider;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
-
     private WebDriver webDriver;
     private Logger logger = Logger.getLogger(getClass());
     protected PageProvider pageProvider;
-
-
     @Before
     public void setup() {
         WebDriverManager.chromedriver().setup();
@@ -27,9 +24,9 @@ public class BaseTest {
         pageProvider = new PageProvider(webDriver);
     }
 
-//    @After
-//    public void tearDown() {
-//        webDriver.quit();
-//        logger.info("Browser was closed");
-//    }
+    @After
+    public void tearDown() {
+        webDriver.quit();
+        logger.info("Browser was closed");
+    }
 }
