@@ -11,7 +11,6 @@ import java.util.List;
 public class HomePage extends ParentPage {
     @FindBy(xpath = "//img[@src='/images/Toolsqa.jpg']")
     private WebElement toolsQaBlock;
-
     @FindBy(xpath = "//img[@class='banner-image' and @src='/images/WB.svg' and @alt='Selenium Online Training']")
     private WebElement seleniumOnlineTrainingBlock;
     @FindBy(xpath = "//div[@class='card mt-4 top-card']")
@@ -59,12 +58,6 @@ public class HomePage extends ParentPage {
         return this;
     }
 
-    public HomePage checkIsTopCardsVisible() {
-        for (WebElement topCard : topCards) {
-            checkIsElementVisible(topCard);
-        }
-        return this;
-    }
 
     public HomePage checkIsElementsBlockVisible() {
         checkIsElementVisible(elementsBlock);
@@ -110,5 +103,4 @@ public class HomePage extends ParentPage {
         clickOnElement(alertsFrameWindowsBlock);
         return this;
     }
-
 }

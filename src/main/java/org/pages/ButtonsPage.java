@@ -66,6 +66,4 @@ public class ButtonsPage extends ParentPage {
     public String getRelativeUrl() {
         return "/buttons";
     }
-
-
 }
