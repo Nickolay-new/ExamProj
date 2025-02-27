@@ -3,7 +3,6 @@ package org.alertsTests;
 import org.baseTest.BaseTest;
 import org.junit.Test;
 
-
 public class AlertsTests extends BaseTest {
 
     @Test
