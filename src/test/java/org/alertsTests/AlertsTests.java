@@ -7,7 +7,7 @@ import org.junit.Test;
 public class AlertsTests extends BaseTest {
 
     @Test
-    public void T0005_AlertsTests()  {
+    public void T0005_AlertsTests() {
         pageProvider.getHomePage()
                 .openPage()
                 .checkIsToolsQaVisible()
@@ -23,14 +23,17 @@ public class AlertsTests extends BaseTest {
                 .clickOnAlertButton()
                 .getTextFromAlert()
                 .acceptAlert();
-                pageProvider.getAlertsPage().clickOnTimerAlertButton()
+        pageProvider.getAlertsPage()
+                .clickOnTimerAlertButton()
                 .waitVisibilityOfElement(5, "//p[@id='timerAlertButton']")
                 .checkIsTimerAlertVisible()
                 .acceptAlert();
-                pageProvider.getAlertsPage().clickOnConfirmButton()
+        pageProvider.getAlertsPage()
+                .clickOnConfirmButton()
                 .acceptAlert();
-                pageProvider.getAlertsPage().clickOnPromptButton()
+        pageProvider.getAlertsPage()
+                .clickOnPromptButton()
                 .sendTextToAlert("Hello, World!");
-                pageProvider.getAlertsPage().acceptAlertWithSendKeys("Hello, World!");
+        pageProvider.getAlertsPage().acceptAlertWithSendKeys("Hello, World!");
     }
 }

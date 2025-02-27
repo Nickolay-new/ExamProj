@@ -8,7 +8,8 @@ public class ButtonsTest extends BaseTest {
     @Test
     public void T0003_ButtonsClickOnButtonsPage() {
         pageProvider.getHomePage().openPage();
-        pageProvider.getHomePage().checkIsToolsQaVisible()
+        pageProvider.getHomePage()
+                .checkIsToolsQaVisible()
                 .checkIsElementsBlockVisible()
                 .scrollToElementsBlock()
                 .clickOnElementsBlock();
