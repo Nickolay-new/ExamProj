@@ -1,10 +1,16 @@
 package org.pages;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class AlertsPage extends ParentPage {
+    private Logger logger = Logger.getLogger(getClass());
 
     @FindBy(xpath = "//h1[text()='Alerts']")
     private WebElement alertsTitle;
@@ -36,10 +42,6 @@ public class AlertsPage extends ParentPage {
         return this;
     }
 
-    public AlertsPage checkIsAlertWithTextVisible() {
-        isElementVisible("//p[@id='confirmResult']");
-        return this;
-    }
 
     public AlertsPage clickOnTimerAlertButton() {
         clickOnElement(timerAlertButton);
@@ -47,7 +49,7 @@ public class AlertsPage extends ParentPage {
     }
 
     public AlertsPage checkIsTimerAlertVisible() {
-        isElementVisible("//p[@id='timerAlertButton']");
+        isElementVisible(timerAlertButton);
         return this;
     }
 
@@ -66,21 +68,24 @@ public class AlertsPage extends ParentPage {
         return this;
     }
 
-    private void waitVisabilityOfElement(int i, String s) {
+    private final String timerAlertButtonLocator = "//p[@id='timerAlertButton']";
+
+    public String getTimerAlertButtonLocator() {
+        return timerAlertButtonLocator;
+    }
+
+
+    public void waitVisabilityOfElement(int i, String s) {
     }
 
     public void acceptAlert() {
         webDriver.switchTo().alert().accept();
+        logger.info("Alert was accepted");
     }
 
     public AlertsPage acceptAlertWithSendKeys(String keys) {
         webDriver.switchTo().alert().sendKeys(keys);
         webDriver.switchTo().alert().accept();
-        return this;
-    }
-
-    public AlertsPage dismissAlert() {
-        webDriver.switchTo().alert().dismiss();
         return this;
     }
 
@@ -91,6 +96,12 @@ public class AlertsPage extends ParentPage {
 
     public Object sendTextToAlert(String s) {
         webDriver.switchTo().alert().sendKeys(s);
+        return this;
+    }
+
+    public Object waitforAlert(int i) {
+        WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(i));
+        wait.until(ExpectedConditions.alertIsPresent());
         return this;
     }
 }

@@ -3,7 +3,7 @@ import org.baseTest.BaseTest;
 import org.junit.Test;
 
 
-public class Availability extends BaseTest {
+public class AvailabilityTest extends BaseTest {
 
     @Test
     public void T0001_ElementsAvailabilityHomePage() {

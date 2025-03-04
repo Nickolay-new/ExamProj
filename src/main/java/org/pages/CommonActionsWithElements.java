@@ -101,4 +101,13 @@ public class CommonActionsWithElements {
         logger.error("Cannot work with element " + e);
         Assert.fail("Cannot work with element " + e);
     }
+
+    protected void waitVisabilityOfElement(int i, String s) {
+        try {
+            webDriverWait_10.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(s)));
+            logger.info("Element is visible");
+        } catch (Exception e) {
+            printErrorAndStopTest(e);
+        }
+    }
 }

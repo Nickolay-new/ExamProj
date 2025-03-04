@@ -24,9 +24,10 @@ public class AlertsTests extends BaseTest {
                 .acceptAlert();
         pageProvider.getAlertsPage()
                 .clickOnTimerAlertButton()
-                .waitVisibilityOfElement(5, "//p[@id='timerAlertButton']")
+                .waitVisibilityOfElement(5, pageProvider.getAlertsPage().getTimerAlertButtonLocator())
                 .checkIsTimerAlertVisible()
-                .acceptAlert();
+                .waitforAlert(5);
+                pageProvider.getAlertsPage().acceptAlert();
         pageProvider.getAlertsPage()
                 .clickOnConfirmButton()
                 .acceptAlert();
